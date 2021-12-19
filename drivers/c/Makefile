@@ -3,7 +3,7 @@ all: safecutoffpower fanstop pwmfancontrol
 safecutoffpower:  safecutoffpower.c 
 	gcc -o safecutoffpower safecutoffpower.c
 
-fanstop: fanstop.c
+fanstop: fanStop.c
 	gcc -o fanStop fanStop.c
 
 pwmfancontrol: pwmControlFan.c
