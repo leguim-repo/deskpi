@@ -11,7 +11,7 @@
 . /lib/lsb/init-functions
 # This is the serial port that connect to deskPi mainboard and it will
 # communicate with Raspberry Pi and get the signal for fan speed adjusting.
-serial_port='/dev/ttyUSB0'
+serial_port='/dev/ttyDeskpiControl'
 
 # Stop deskpi.service so that user can define the speed level.
 sudo systemctl stop deskpi.service

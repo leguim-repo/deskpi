@@ -10,9 +10,9 @@
 
 int main(void){
 	while(1){
- 		int serial_port = open("/dev/ttyUSB0", O_RDWR);
+ 		int serial_port = open("/dev/ttyDeskpiControl", O_RDWR);
 		if (serial_port < 0){
-			printf("Can not access /dev/ttyUSB0, please check it out.\n");
+			printf("Can not access /dev/ttyDeskpiControl, please check it out.\n");
  			}
 
 	struct termios tty;
