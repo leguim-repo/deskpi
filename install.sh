@@ -1,5 +1,8 @@
 #!/bin/bash
-# 
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root or with sudo"
+  exit
+fi
 . /lib/lsb/init-functions
 cd ~
 sh -c "git clone https://github.com/DeskPi-Team/deskpi.git"
