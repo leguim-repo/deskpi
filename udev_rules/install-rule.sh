@@ -1,1 +1,0 @@
-echo "* * * * * Installing udev rule * * * * *"

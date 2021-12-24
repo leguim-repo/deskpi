@@ -4,7 +4,6 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 . /lib/lsb/init-functions
-#sh -c "git clone https://github.com/DeskPi-Team/deskpi.git"
 
 daemonname="deskpi"
 tempmonscript=/usr/bin/pmwFanControl
@@ -33,6 +32,7 @@ sudo sed -i '$a\dtoverlay=dwc2,dr_mode=host' /boot/config.txt
 if [ $? -eq 0 ]; then
    log_action_msg "dwc2 has been setting up successfully"
 fi
+
 # install PWM fan control daemon.
 log_action_msg "DeskPi main control service loaded."
 cd $installationfolder/drivers/c/ 
@@ -90,4 +90,4 @@ log_action_msg "System will reboot in 5 seconds to take effect."
 sudo sync
 sleep 5 
 log_action_msg "Reboot disabled for test purposes"
-#sudo reboot
+sudo reboot
