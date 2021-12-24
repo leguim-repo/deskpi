@@ -13,7 +13,7 @@ safeshutdaemon=/lib/systemd/system/$daemonname-safeshut.service
 installationfolder=$(pwd)
 
 echo "* * * * * Installing udev rule * * * * *"
-sudo cp $installationfolder/99-deskpi-pro.rules /etc/udev/rules.d/
+sudo cp $installationfolder/udev_rules/99-deskpi-pro.rules /etc/udev/rules.d/
 
 make -C $installationfolder/drivers/c/ compile-all
 
