@@ -14,8 +14,8 @@ pwmfancontrol: pwmControlFan.c ## Compile pwmFanControl
 
 clean: ## Clean compiled files
 	rm -rf safecutoffpower
-        rm -rf pwmFanControl
-        rm -rf fanStop
+	rm -rf pwmFanControl
+	rm -rf fanStop
 
 install-pwmFanControl: pwmFanControl ## Install pwmFanControl
 	sudo cp -rf pwmFanControl /usr/bin/pwmFanControl
