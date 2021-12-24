@@ -30,6 +30,6 @@ install-fanstop: ## Install fanstop
 	sudo chmod 755 /usr/bin/fanstop
 
 compile-all: safecutoffpower fanstop pwmfancontrol ## Compile all utilities
-	@echo "Compile all drivers"
+	@echo "Compiled all drivers"
 
 install-all: install-pwmFanControl install-safecutoffpower install-fanstop ## Install pwmFanControl, safecutoffpower, fanstop
