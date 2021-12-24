@@ -6,12 +6,19 @@ fi
 . /lib/lsb/init-functions
 cd ~
 #sh -c "git clone https://github.com/DeskPi-Team/deskpi.git"
+
 cd $HOME/deskpi/
+
+
 daemonname="deskpi"
 tempmonscript=/usr/bin/pmwFanControl
 deskpidaemon=/lib/systemd/system/$daemonname.service
 safeshutdaemon=/lib/systemd/system/$daemonname-safeshut.service
 installationfolder=$HOME/$daemonname
+
+source udev_rules/install-rule.sh
+make -C drivers/c/ compile-all
+
 
 # install wiringPi library.
 log_action_msg "DeskPi Fan control script installation Start." 
