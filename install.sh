@@ -12,8 +12,10 @@ deskpidaemon=/lib/systemd/system/$daemonname.service
 safeshutdaemon=/lib/systemd/system/$daemonname-safeshut.service
 installationfolder=$(pwd)
 
-source udev_rules/install-rule.sh
-make -C drivers/c/ compile-all
+echo "* * * * * Installing udev rule * * * * *"
+sudo cp $installationfolder/99-deskpi-pro.rules /etc/udev/rules.d/
+
+make -C $installationfolder/drivers/c/ compile-all
 
 
 # install wiringPi library.
