@@ -2,7 +2,7 @@
 # 
 . /lib/lsb/init-functions
 cd ~
-sh -c "git clone https://github.com/DeskPi-Team/deskpi.git"
+#sh -c "git clone https://github.com/DeskPi-Team/deskpi.git"
 cd $HOME/deskpi/
 daemonname="deskpi"
 tempmonscript=/usr/bin/pmwFanControl

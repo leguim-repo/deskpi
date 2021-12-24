@@ -9,10 +9,11 @@ ser = serial.Serial("/dev/ttyDeskpiControl", 9600, timeout=30)
 
 try: 
     while True:
+        print(ser.isOpen())
         if ser.isOpen():
             cpu_temp = subprocess.getoutput('vcgencmd measure_temp|awk -F\'=\' \'{print $2\'}')
             cpu_temp = int(cpu_temp.split('.')[0])
-
+            print(f"cpu_temp: {cpu_temp}")
             if cpu_temp < 40:
                 ser.write(b'pwm_000')
             elif cpu_temp > 40 and cpu_temp < 50:

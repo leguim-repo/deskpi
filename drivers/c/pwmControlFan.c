@@ -25,9 +25,9 @@ int init_serial( char *serial_name)
 		printf("Please check serial port over OTG\n");
 	}
 
-	tty.c_cflag &= ~PARENB; 
+	tty.c_cflag &= ~PARENB;
 	tty.c_cflag |= PARENB;
-	tty.c_cflag &= ~CSTOPB; 
+	tty.c_cflag &= ~CSTOPB;
 	tty.c_cflag |= CSTOPB;
 
 	tty.c_cflag |= CS5;
@@ -140,7 +140,7 @@ int main(void){
 		}
 		*/
 		cpu_temp=read_cpu_tmp();
-		//printf("cpu_temp:%d\n",cpu_temp);
+		printf("cpu_temp:%d\n",cpu_temp);
 
 		if(cpu_temp < conf_info[0])
 		{
