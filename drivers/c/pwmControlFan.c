@@ -140,7 +140,7 @@ int main(void){
 		}
 		*/
 		cpu_temp=read_cpu_tmp();
-		printf("cpu_temp:%d\n",cpu_temp);
+		#printf("cpu_temp:%d\n",cpu_temp);
 
 		if(cpu_temp < conf_info[0])
 		{
