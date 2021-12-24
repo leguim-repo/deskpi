@@ -4,17 +4,13 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 . /lib/lsb/init-functions
-cd ~
 #sh -c "git clone https://github.com/DeskPi-Team/deskpi.git"
-
-cd $HOME/deskpi/
-
 
 daemonname="deskpi"
 tempmonscript=/usr/bin/pmwFanControl
 deskpidaemon=/lib/systemd/system/$daemonname.service
 safeshutdaemon=/lib/systemd/system/$daemonname-safeshut.service
-installationfolder=$HOME/$daemonname
+installationfolder=$(pwd)
 
 source udev_rules/install-rule.sh
 make -C drivers/c/ compile-all
