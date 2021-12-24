@@ -91,4 +91,5 @@ log_success_msg "DeskPi PWM Fan Control and Safeshut Service installed successfu
 log_action_msg "System will reboot in 5 seconds to take effect." 
 sudo sync
 sleep 5 
-sudo reboot
+log_action_msg "Reboot disabled for test purposes"
+#sudo reboot
