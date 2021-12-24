@@ -74,7 +74,7 @@ case $levelNumber in
 	4) 
 	   log_action_msg "You'tve select 100% speed level"
 	   sudo sh -c "echo pwm_100 > $serial_port"
-	   log_action_msg "Fan speed level has been change to 100%"
+	   log_action_msg "Fan speed level has been change to 100% $serial_port"
 	   ;;
 	5) 
 	   log_action_msg "Turn off fan"
